@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class OperacionesEnteros {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Leer tres números enteros desde teclado
+        System.out.print("Introduce el primer número: ");
+        int num1 = sc.nextInt();
+        System.out.print("Introduce el segundo número: ");
+        int num2 = sc.nextInt();
+        System.out.print("Introduce el tercer número: ");
+        int num3 = sc.nextInt();
+        
+        // Calcular la suma de los dos primeros números divididos por el tercer número
+        double suma = (num1 + num2) / (double)num3;
+        System.out.println("La suma de " + num1 + " y " + num2 + " dividido por " + num3 + " es igual a " + suma);
+        
+        // Comprobar si la suma de los tres números es par
+        boolean sumaPar = (num1 + num2 + num3) % 2 == 0;
+        System.out.println("La suma de los tres números es par? " + sumaPar);
+        
+        // Comprobar si el resto del primer número dividido por el segundo número es distinto de 0
+        boolean restoDistintoCero = num1 % num2 != 0;
+        System.out.println("El resto de " + num1 + " dividido por " + num2 + " es distinto de cero? " + restoDistintoCero);
+        
+        // Comprobar si la multiplicación del primer número por la mitad del segundo número es mayor que el tercer número
+        boolean multiplicacionMayor = num1 * (num2 / 2) > num3;
+        System.out.println("El resultado de multiplicar " + num1 + " por la mitad de " + num2 + " es mayor que " + num3 + "? " + multiplicacionMayor);
+        
+        // Comprobar si el resultado del cuadrado del primer número menos el triple del segundo número por el tercer número es menor que 0
+        boolean resultadoMenorCero = num1*num1 - 3*num2*num3 < 0;
+        System.out.println("El resultado de " + num1 + " al cuadrado menos 3 veces " + num2 + " por " + num3 + " es menor que cero? " + resultadoMenorCero);
+        
+        sc.close();
+    }
+}
